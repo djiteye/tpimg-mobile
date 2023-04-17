@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+
+    <TextView
+        android:id="@+id/titre"
+        android:layout_width="405dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="IMG"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.057"
+        tools:ignore="InvalidId" />
+
+
+
+
+    <LinearLayout
+
+        android:id="@+id/linearLayout1"
+        android:layout_width="405dp"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titre"
+        app:layout_constraintTop_toBottomof="titre"
+        app:layout_constraintVertical_bias="0.037"
+        tools:ignore="InvalidId">
+
+        <TextView
+            android:id="@+id/taille"
+            android:layout_width="275dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Votre taille (en cm)"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            app:layout_constraintTop_toBottomof="titre" />
+
+        <EditText
+            android:id="@+id/edittaille"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="taille"
+            android:inputType="number"
+            android:layout_marginRight="10dp"/>
+
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/poids1"
+        android:layout_width="405dp"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout1"
+        app:layout_constraintVertical_bias="0.037"
+        tools:ignore="DuplicateIds,InvalidId">
+        <TextView
+            android:id="@+id/poids"
+            android:layout_width="275dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Votre poids (en kg)"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            app:layout_constraintTop_toBottomof="titre" />
+
+        <EditText
+            android:id="@+id/editpoids"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:hint="poids"
+            android:ems="10"
+            android:inputType="number"
+            android:layout_marginRight="10dp"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/age1"
+        android:layout_width="405dp"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/poids1"
+        app:layout_constraintTop_toBottomof="titre"
+        app:layout_constraintVertical_bias="0.037">
+
+        <TextView
+            android:id="@+id/age"
+            android:layout_width="275dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Votre age"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            app:layout_constraintTop_toBottomof="" />
+
+        <EditText
+            android:id="@+id/editage"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:hint="age"
+            android:ems="10"
+            android:inputType="number"
+            android:layout_marginRight="10dp"/>
+
+    </LinearLayout>
+
+
+
+
+
+    <RadioGroup
+        android:id="@+id/genre"
+        android:layout_width="405dp"
+        android:layout_height="60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/age1"
+        app:layout_constraintVertical_bias="0.037">
+
+
+        <RadioButton
+            android:id="@+id/rdbhomme"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:checked="false"
+            android:gravity="center"
+            android:text="Homme"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+        <RadioButton
+            android:id="@+id/rdbfemme"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:text="Femme" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btncalculIMG"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="Calculer IMG"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintTop_toBottomOf="@+id/genre"
+        app:layout_constraintVertical_bias="0.093" />
+    <TextView
+        android:id="@+id/lblResultat"
+        android:layout_width="405dp"
+        android:layout_height="60dp"
+        android:text="Votre IMG est .... %"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/btncalculIMG"
+        app:layout_constraintVertical_bias="0.093"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
+
+    <TextView
+        android:id="@+id/lblInterpretation"
+        android:layout_width="405dp"
+        android:layout_height="60dp"
+        android:text="Interpretation: ....."
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/lblResultat"
+        app:layout_constraintVertical_bias="0.093"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
